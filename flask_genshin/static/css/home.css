@@ -1,0 +1,196 @@
+body {
+    background-color: #E1BEE7;
+}
+
+div.latest-updates {
+    width: 100%;
+    height: auto;
+    
+    padding: 4vw;
+}
+
+div.latest-updates-heading {
+    width: 100%;
+    height: auto;
+
+    font-size: 8vw;
+    font-weight: 900;
+    color: #9C27B0;
+
+    text-align: center;
+
+    /* position: relative;
+    top: 3vw;
+    left: 2vw; */
+}
+
+div.news {
+    width: 80%;
+    height: auto;
+
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-around; */
+    margin: 0vw 10vw;
+}
+
+div.news-box {
+    width: 100%;
+    height: 64vw;
+
+    background-color: white;
+    margin-bottom: 5vw;
+
+    border: 0px;
+    border-radius: 10px;
+
+    overflow: hidden;
+}
+
+div.news-box img {
+    width: 100%;
+    height: 70%;
+}
+
+div.news-box p {
+    font-size: 4.4vw;
+    font-weight: 200;
+    color: #AB47BC;
+
+    text-align: center;
+    font-family: 'Roboto Slab', serif;
+    margin: 0vw 1vw;
+}
+
+@media only screen and (min-width: 992px) {
+    div.latest-updates-heading {
+        font-size: 7vw;
+    }
+
+    div.news {
+        width: 100%;
+        margin: 0px;
+
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    div.news-box {
+        width: 25vw;
+        height: 20vw;
+    
+        margin: 0px;
+    }
+    
+    div.news-box p {
+        font-size: 1.4vw;
+    }
+}
+
+div.slide-show {
+    position: relative;
+    width: 100%;
+    height: 56.25vw;
+}
+
+div.slide-show-images {
+    position: absolute;
+    opacity: 0;
+    transition: opacity 2s;
+}
+
+div.slide-show-images img {
+    width: 100%;
+    height: 56.25vw;
+}
+
+div.slide-show-buttons {
+    position: absolute;
+    left: 50%;
+    top: 95%;
+    transform: translate(-50%,-50%);
+}
+
+div.slide-show-buttons div {
+    height: 0.8vw;
+    width: 4vw;
+    border-radius: 2px;
+    background-color: white;
+    display: inline-block;
+    margin: 0.5vw;
+}
+
+div.slide-show-buttons div:hover {
+    background-color: #BA68C8;
+}
+
+div.genshin-text {
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 40%;
+    left: 70%;
+
+    width: 50vw;
+    height: 22vw;
+    z-index: 100;
+}
+
+div.genshin-text img {
+    width: 50vw;
+    height: 22vw;
+}
+
+div.traveller {
+    width: 100%;
+    height: 80vw;
+    /* background-image: url("images/traveller_background.png");
+    background-size: cover; */
+}
+
+.traveller-image {
+    width: 62.5%;
+    height: inherit;
+
+    position: relative;
+    top: 0px;
+    left: 0px;
+}
+
+div.traveller-text {
+    width: 35%;
+    height: auto;
+    margin-top: 8vw;
+    margin-right: 2vw;
+
+    float: right;
+}
+
+div.traveller-text h1 {
+    font-size: 4.8vw;
+    font-weight: 900;
+
+    color: #9C27B0;
+    margin-bottom: 5vw;
+}
+
+div.traveller-text p {
+    font-size: 2.4vw;
+    line-height: 3.6vw;
+    word-spacing: 1.8vw;
+
+    color: #AB47BC;
+    font-family: 'Gwendolyn', cursive;
+}
+
+/* div.lines {
+    width: 40vw;
+    height: 100vh;
+
+    position: fixed;
+    top: 0px;
+    left: 30vw;
+    background-color: transparent;
+
+    border-left: 2px solid black;
+} */

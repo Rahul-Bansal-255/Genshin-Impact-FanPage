@@ -1,0 +1,136 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    /* overflow-x: hidden; */
+    font-family: Sans-serif;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: white;
+}
+::-webkit-scrollbar-thumb {
+    background: #CE93D8;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #BA68C8; 
+}
+
+ul.navbar {display: none;}
+
+div.nav-mobile-btn {
+    display: block;
+    position: fixed;
+    top: 2.5vw;
+    left: 1vw;
+    z-index: 1000;;
+}
+
+div.nav-mobile-btn img {
+    height: 15vw;
+    width: auto;
+    transition: transform 1s;
+}
+
+.star-rotate {
+    transform: rotate(45deg);
+}
+
+ul.nav-mobile {
+    position: fixed;
+    top: 20vw;
+    left: 5vw;
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity 2s;
+    visibility: hidden;
+}
+
+ul.nav-mobile-blur {
+    opacity: 0.8;
+    visibility: visible;
+}
+
+ul.nav-mobile li {
+    list-style-type: none;
+    font-size: 8vw;
+    margin-bottom: 2vw;
+}
+
+ul.nav-mobile li a {
+    text-decoration: none;
+    color: white;
+    text-shadow: 2px 2px 5px #E1BEE7, 1px 1px 5px #9C27B0;
+}
+
+@media only screen and (min-width: 500px) {
+    div.nav-mobile-btn img {
+        height: 10vw;
+        width: auto;
+    }
+    
+    ul.nav-mobile {
+        position: fixed;
+        top: 14vw;
+        left: 2.5vw;
+        z-index: 1000;
+    }
+    
+    ul.nav-mobile li {
+        font-size: 5vw;
+        margin-bottom: 2vw;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    div.nav-mobile-btn {
+        display: none;
+    }
+
+    ul.nav-mobile {
+        display: none;
+    }
+
+    ul.navbar {
+        display: block;
+        position: fixed;
+        top: 5vw;
+        left: 2.5vw;
+        z-index: 1000;
+    }
+    
+    ul.navbar li {
+        list-style-type: none;
+        font-size: 3vw;
+        margin-bottom: 2vw;
+    }
+    
+    ul.navbar li a {
+        text-decoration: none;
+        color: white;
+        text-shadow: 2px 2px 5px #E1BEE7, 1px 1px 5px #9C27B0;
+    }
+    
+    ul.navbar li a img{
+        height: 3.5vw;
+        width: auto;
+        float: left;
+        margin-right: 0.5vw;
+    }
+    
+    ul.navbar li p {
+        display: inline;
+        opacity: 0;
+        transition: 1s;
+    }
+    
+    ul.navbar li:hover p {
+        opacity: 0.8;
+    }
+}

@@ -1,0 +1,17 @@
+{% extends 'layout.html' %}
+{% block head %}
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/characters.css') }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Corinthia&display=swap" rel="stylesheet">
+{% endblock head %}
+{% block body %}
+  <div class="container">
+  {% for i in range(len(pic_list)) %}
+    <div class="box">
+      <img src="{{ url_for('static', filename='images/genshin_chars/' + pic_list[i]) }}">
+      <p>{{ char_names[i] }}</p>
+    </div>
+  {% endfor %}
+  </div>
+{% endblock body %}

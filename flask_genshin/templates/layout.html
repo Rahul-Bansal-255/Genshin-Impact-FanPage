@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Genshin Impact</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/layout.css') }}">
+    {% block head %}{% endblock head %}
+</head>
+<body>
+  <div class="nav-mobile-btn" onclick="nav_mobile_toggle()">
+    <img src="{{ url_for('static',filename='svg/star.svg') }}" id="star-img">
+  </div>
+  <ul class="nav-mobile" id="nav-mobile">
+    <li>
+      <a href="{{ url_for('home') }}">Home</a>
+    </li>
+    <li>
+      <a href="{{ url_for('wallpapers') }}">Wallpapers</a>
+    </li>
+    <li>
+      <a href="{{ url_for('characters') }}">Character Details</a>
+    </li>
+    <li>
+      <a href="{{ url_for('weapons') }}">Weapon Details</a>
+    </li>
+    <li>
+      <a href="https://www.hoyolab.com/home" target="_blank">Community</a>
+    </li>
+  </ul>
+
+  <ul class="navbar">
+    <li>
+      <a href="{{ url_for('home') }}">
+        <img src="{{ url_for('static',filename='svg/star.svg') }}">
+        <p>Home</p>
+      </a>
+    </li>
+    <li>
+      <a href="{{ url_for('wallpapers') }}">
+        <img src="{{ url_for('static',filename='svg/star.svg') }}">
+        <p>Wallpapers</p>
+      </a>
+    </li>
+    <li>
+      <a href="{{ url_for('characters') }}">
+        <img src="{{ url_for('static',filename='svg/star.svg') }}">
+        <p>Character Details</p>
+      </a>
+    </li>
+    <li>
+      <a href="{{ url_for('weapons') }}">
+        <img src="{{ url_for('static',filename='svg/star.svg') }}">
+        <p>Weapon Details</p>
+      </a>
+    </li>
+    <li>
+      <a href="https://www.hoyolab.com/home" target="_blank">
+        <img src="{{ url_for('static',filename='svg/star.svg') }}">
+        <p>Community</p>
+      </a>
+    </li>
+  </ul>
+
+  {% block body %}{% endblock body %}
+    
+  <script src="{{ url_for('static', filename='js/nav_mobile.js') }}"></script>
+</body>
+</html>

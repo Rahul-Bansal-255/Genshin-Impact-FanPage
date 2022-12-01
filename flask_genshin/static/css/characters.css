@@ -1,0 +1,38 @@
+body {
+    background-color: #9C27B0;
+}
+
+div.container {
+    width: 80vw;
+    height: auto;
+
+    margin: 0vw 10vw;
+}
+
+div.box {
+    width: inherit;
+    height: 20vw;
+    margin: 2vw 0vw;
+
+    background-image: url('../images/chars_background.png') ;
+
+    border: 0px solid black;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+div.box img {
+    width: 20vw;
+    height: 20vw;
+}
+
+div.box p {
+    float: right;
+
+    font-size: 10vw;
+    color: #E1BEE7;
+    text-shadow: 2px 2px 5px #E1BEE7, 1px 1px 5px #9C27B0;
+    font-family: 'Corinthia', cursive;
+
+    margin: 5vw 5vw 5vw 0vw;
+}

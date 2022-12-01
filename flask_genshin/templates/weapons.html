@@ -1,0 +1,85 @@
+{% extends 'layout.html' %}
+{% block head %}
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/weapons.css') }}">
+{% endblock head %}
+{% block body %}
+  <div class="container">
+    <ul class="weapons-navbar">
+      <li class="weapons-navbar-item" onclick="show_weapons('1')">
+        Swords
+      </li>
+      <li class="weapons-navbar-item" onclick="show_weapons('2')">
+        Books
+      </li>
+      <li class="weapons-navbar-item" onclick="show_weapons('3')">
+        Bows
+      </li>
+      <li class="weapons-navbar-item" onclick="show_weapons('4')">
+        Claymore
+      </li>
+      <li class="weapons-navbar-item" onclick="show_weapons('5')">
+        Polearm
+      </li>
+    </ul>
+
+    <div class="burger-icon" onclick="toggle_class('weapons-navbar-mobile', 'show-weapons-navbar-mobile')">
+      <img src="{{ url_for('static', filename='svg/burger_icon.svg') }}">
+    </div>
+
+    <ul class="weapons-navbar-mobile">
+      <li class="weapons-navbar-mobile-item" onclick="show_weapons('1')">
+        Swords
+      </li>
+      <li class="weapons-navbar-mobile-item" onclick="show_weapons('2')">
+        Books
+      </li>
+      <li class="weapons-navbar-mobile-item" onclick="show_weapons('3')">
+        Bows
+      </li>
+      <li class="weapons-navbar-mobile-item" onclick="show_weapons('4')">
+        Claymore
+      </li>
+      <li class="weapons-navbar-mobile-item" onclick="show_weapons('5')" style="border-bottom: 0vw;">
+        Polearm
+      </li>
+    </ul>
+
+    <div class="flex-container" style="display: none;" id="cards-1">
+      {% for i in swords_pic %}
+      <div class="card">
+        <img src="{{ url_for('static', filename='images/genshin_weapons/swords/' + i) }}">
+      </div>
+      {% endfor %}
+    </div>
+    <div class="flex-container" style="display: none;" id="cards-2">
+      {% for i in books_pic %}
+      <div class="card">
+        <img src="{{ url_for('static', filename='images/genshin_weapons/books/' + i) }}">
+      </div>
+      {% endfor %}
+    </div>
+    <div class="flex-container" style="display: none;" id="cards-3">
+      {% for i in bows_pic %}
+      <div class="card">
+        <img src="{{ url_for('static', filename='images/genshin_weapons/bows/' + i) }}">
+      </div>
+      {% endfor %}
+    </div>
+    <div class="flex-container" style="display: none;" id="cards-4">
+      {% for i in claymore_pic %}
+      <div class="card">
+        <img src="{{ url_for('static', filename='images/genshin_weapons/claymore/' + i) }}">
+      </div>
+      {% endfor %}
+    </div>
+    <div class="flex-container" style="display: none;" id="cards-5">
+      {% for i in polearm_pic %}
+      <div class="card">
+        <img src="{{ url_for('static', filename='images/genshin_weapons/polearm/' + i) }}">
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+
+  <script src="{{ url_for('static', filename='js/weapons.js') }}"></script>
+{% endblock body %}

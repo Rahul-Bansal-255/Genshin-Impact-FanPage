@@ -1,0 +1,64 @@
+{% extends 'layout.html' %}
+{% block head %}
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/home.css') }}">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gwendolyn:wght@700&family=Roboto+Slab:wght@300&display=swap" rel="stylesheet">
+{% endblock head %}
+{% block body %}
+  <div class="slide-show">
+    <div class="slide-show-images">
+      <img src="{{ url_for('static', filename='images/slide_show_1.png') }}">
+    </div>
+    <div class="slide-show-images">
+      <img src="{{ url_for('static', filename='images/slide_show_2.png') }}">
+    </div>
+    <div class="slide-show-images">
+      <img src="{{ url_for('static', filename='images/slide_show_3.png') }}">
+    </div>
+    
+    <div class="slide-show-buttons">
+      <div onclick="slide_show_image(0)"></div>
+      <div onclick="slide_show_image(1)"></div>
+      <div onclick="slide_show_image(2)"></div>
+    </div>
+
+    <div class="genshin-text">
+      <img src="{{ url_for('static', filename='images/genshin.png') }}" alt="">
+    </div>
+  </div>
+
+  <div class="latest-updates">
+    <div class="latest-updates-heading">
+      LATEST UPDATES
+    </div>
+    <div class="news">
+      <div class="news-box">
+        <img src="{{ url_for('static', filename='images/news_1.jpg') }}">
+        <p>All New Update With New Characters, Weapons And Alot More Fun</p>
+      </div>
+      <div class="news-box">
+        <img src="{{ url_for('static', filename='images/news_2.jpg') }}">
+        <p>Immerse In The Magical World Of Genshin Impact</p>
+      </div>
+      <div class="news-box">
+        <img src="{{ url_for('static', filename='images/news_3.jpg') }}">
+        <p>Begin A New Journey Full Of Adventures And Mysterious Creatures With Genshin Impact</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="traveller">
+    <img class="traveller-image" src="{{ url_for('static', filename='images/traveler.png') }}">
+    <div class="traveller-text">
+      <h1>MESSAGE FROM A TRAVELLER</h1>
+      <p>Hey Their, Let Us Begin Our Journey In The Land Of Genshin. Here You Will Immerse In Furious Battles,
+          Experience A Story Heard Never Before And Make New Friends.</p>
+    </div>
+  </div>
+
+  <!-- <div class="lines"></div> -->
+
+  <script src="{{ url_for('static', filename='js/home.js') }}"></script>
+{% endblock body %}
